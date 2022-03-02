@@ -1,3 +1,5 @@
+/* applies to whole page, font plus box uniformity */
+
 * {
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -9,6 +11,8 @@
 
 }
 
+/* color of main title, forecast cards */
+
 .jumbotron {
     background-color: rgb(131, 83, 175);
     color: white;
@@ -18,6 +22,8 @@
     background-color: rgb(133, 94, 170);
     text-align: center;
 }
+
+/* forecast cards change color when hovered over */
 
 .col-sm-4:hover {
     background-color: rgb(231, 228, 228);
@@ -31,6 +37,8 @@
 #clearHis {
     background-color: blue;
 }
+
+/* both buttons turn green when hovered over */
 
 #searchButton:hover {
     background-color: green;

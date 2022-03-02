@@ -2,6 +2,8 @@ $("#searchButton").on("click", populateWeather);
 $(window).on("load", loadCities);
 $("#clearHis").on("click", clearHistory);
 
+// starts functions when the search button is pressed
+
 let city="";
 let searchCity = $("#citySearch");
 let searchButton = $("#searchButton");
@@ -13,7 +15,11 @@ let currentWindspeed =$("#windSpeed");
 let currentUvindex = $("#uvIndexWarning");
 let searchedCity = [];
 
+//unique API key
+
 let keyAPI ="9b3b7e7b2eb2909a41d4a2de25b0083f";
+
+//continue to show last city
 
 function populateWeather(event){
     event.preventDefault();
@@ -22,6 +28,8 @@ function populateWeather(event){
         currentWeather(city);
     }
 }
+
+//displays current weather, converts from K to F, and windspeed to MPH, everything set to 1 decimal point
 
 function currentWeather(city){
     
@@ -67,6 +75,8 @@ function currentWeather(city){
 }
 
 
+//UV index retrieved, green when under 5, red over 7, yellow all else
+
 function UVIndex(ln,lt){
  
     let uvURL=`https://api.openweathermap.org/data/2.5/uvi?appid=${keyAPI}&lat=${lt}&lon=${ln}`;
@@ -84,6 +94,8 @@ function UVIndex(ln,lt){
                 }
                 });    
 }
+
+//gets future forecast, only 5 days, replaces blank areas in the cards
 
 function forecast(cityid){
     let dayover= false;
@@ -109,6 +121,7 @@ function forecast(cityid){
         });
 }
 
+//adds past searches to list, makes them all uppercase
 
 function addToList(c){
     let listEl= $(`<li>${c.toUpperCase()}</li>`);
@@ -117,6 +130,7 @@ function addToList(c){
     $(".list-group").append(listEl);
 }
 
+//empty and fill list each time with data from localStorage
 
 function loadCities(){
     $("ul").empty();
@@ -131,6 +145,8 @@ function loadCities(){
     }
 
 }
+
+//when clear button is pressed, then list of past searches is cleared and page is reset
 
 function clearHistory(event){
     event.preventDefault();
