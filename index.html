@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+<body>
+
+    <div class="jumbotron container-fluid text-center p-3">
+        <h1> <strong>Weather Dashboard</strong></h1>
+    </div>
+    <div id="enclosingBox" class="container">
+
+        <div id="prevSearchbox" class="row">
+            <div class="col-sm-4 bg-light">
+              
+                <h4 class="pt-1">Search for a City:</h4>
+            
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="citySearch" aria-label="City Search" aria-describedby="searchButton" placeholder="ex. Rome, London, Paris">
+                    <div class="input-group-append">
+                        <button class=" btn text-light" id="searchButton"><i class="bi-search"></i></button>
+                    </div>
+                </div>
+                
+                <button class=" btn btn-info" type="button" id="clearHis">Clear history<i class="bi-x"></i></button>
+                <ul class="list-group">
+
+                </ul>
+            </div>   
+            <div class="col-sm-8" id="mainBox">
+                <div class="row">
+                    <div class="col-sm-12" id="current-weather">
+                        <h3 class="city-name mb-1 mt-2 bolder" id="cityCur"></h3>
+                        <p>Temperature: <span class="current" id="temperature"></span>
+                        <p>Humidity: <span class="current" id="humidity"></span> 
+                        <p>Wind Speed: <span class="current" id="windSpeed"></span>
+                        <p>UV index: <span class="rounded btn py-1 px-1 text-black" id="uvIndexWarning"></span> 
+                    </div>
+                </div>
+                <div class="col-sm-12" id="future-weather">
+                    <h3>Five Day Forecast: </h3>
+                    <div class="row text-light">
+                        <div class="col-sm-4 forecast ml-2 mb-2 p-2 mt-2 rounded-circle" >
+                            <p id="dateCalc0">
+                            <p id="weIcon0">
+                            <p>Temp:<span id="tempCalc0"></span>
+                            <p>Humidity:<span id="humidityCalc0"></span>
+                        </div>
+                        <div class="col-sm-4 forecast ml-2 mb-2 p-2 mt-2 rounded-circle" >
+                            <p id="dateCalc1">
+                            <p id="weIcon1">
+                            <p>Temp:<span id="tempCalc1"></span>
+                            <p>Humidity:<span id="humidityCalc1"></span>
+                        </div>
+                        <div class="col-sm-4 forecast ml-2 mb-2 p-2 mt-2 rounded-circle">
+                            <p id="dateCalc2">
+                            <p id="weIcon2">
+                            <p>Temp:<span id="tempCalc2"></span>
+                            <p>Humidity:<span id="humidityCalc2"></span>
+                        </div>
+                        <div class="col-sm-4 forecast ml-2 mb-2 p-2 mt-2 rounded-circle">
+                            <p id="dateCalc3">
+                            <p id="weIcon3">
+                            <p>Temp:<span id="tempCalc3"></span>
+                            <p>Humidity:<span id="humidityCalc3"></span>
+                        </div>
+                        <div class="col-sm-4 forecast ml-2 mb-2 p-2 mt-2 rounded-circle" >
+                            <p id="dateCalc4">
+                            <p id="weIcon4">
+                            <p>Temp:<span id="tempCalc4"></span>
+                            <p>Humidity:<span id="humidityCalc4"></span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+</html>

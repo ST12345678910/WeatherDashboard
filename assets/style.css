@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.forecast {
+
+    font-size: 0.8em;
+
+}
+
+.jumbotron {
+    background-color: rgb(131, 83, 175);
+    color: white;
+}
+
+.col-sm-4 {
+    background-color: rgb(133, 94, 170);
+    text-align: center;
+}
+
+.col-sm-4:hover {
+    background-color: rgb(231, 228, 228);
+    color: black;
+}
+
+#searchButton {
+    background-color: blue;
+}
+
+#clearHis {
+    background-color: blue;
+}
+
+#searchButton:hover {
+    background-color: green;
+}
+
+#clearHis:hover {
+    background-color: green;
+}
+
+#enclosingBox {
+    border: solid black 2px;
+}
+
+#mainBox {
+    background-color: #eff0d1;
+}
