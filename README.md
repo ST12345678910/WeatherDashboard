@@ -8,6 +8,6 @@ side of the page. Additionally, dependant on the strength of the UV
 index in any particular city, the UV index symbol will change color
 accordingly. 
 
-[Deployed Site](https://st12345678910.github.io/PasswordGenerator/)
+[Deployed Site](https://st12345678910.github.io/WeatherDashboard/)
  
 ![PasswordGenerator](assets/weatherdemo1.png)
